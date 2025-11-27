@@ -1,15 +1,9 @@
-# Root level - Ignore everything except specific folders and files
-/*
-!/server/
-!/client/
-!/README.md
-!/DEPLOYMENT.md
-!/MIGRATION_GUIDE.md
-!/PROJECT_STRUCTURE.md
-!/QUICK_START.md
-!/SPECIFICATION.md
-!/REFACTORING_SUMMARY.md
-!.gitignore
+# Environment variables - NEVER COMMIT
+.env
+.env.local
+.env.*.local
+server/.env
+client/.env
 
 # Python
 __pycache__/
@@ -36,16 +30,17 @@ venv/
 ENV/
 env/
 .venv
-server/.py_venv
 .py_venv/
+server/.py_venv/
+py_venv/
 
 # Node
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-dist/
 .parcel-cache/
+client/dist/
 
 # IDEs
 .vscode/
@@ -53,25 +48,19 @@ dist/
 *.swp
 *.swo
 *~
-.DS_Store
 
-# Environment
-.env
-.env.local
-.env.*.local
+# OS
+.DS_Store
+Thumbs.db
 
 # Testing
 .pytest_cache/
 .coverage
 htmlcov/
 
-# Build
+# Build output
 dist/
 build/
-
-# OS
-.DS_Store
-Thumbs.db
 
 # Generated files
 conversations.json
